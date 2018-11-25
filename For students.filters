@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Code\Main.cpp" />
+    <ClCompile Include="Code\Creation.cpp">
+      <Filter>Creation</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\ExtendedOpenGLSetup.cpp">
+      <Filter>Creation</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Drawing.cpp">
+      <Filter>Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\ShaderCreation.cpp">
+      <Filter>Creation</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\model.cpp">
+      <Filter>Creation</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\glTexLoader.cpp">
+      <Filter>Creation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\MatrixAlgebra.cpp">
+      <Filter>Algebra</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Code\Creation.h">
+      <Filter>Creation</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\ExtendedOpenGLSetup.h">
+      <Filter>Creation</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\CoreOpenGLFunctions.h">
+      <Filter>Creation</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Drawing.h">
+      <Filter>Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\MatrixAlgebra.h">
+      <Filter>Algebra</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LayGeometry.vp">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="LayGeometry.fp">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Quad.vp">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Quad.fp">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Creation">
+      <UniqueIdentifier>{2afb023a-5909-45f4-9091-2085b22aa17e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Algebra">
+      <UniqueIdentifier>{8f8fafed-d626-4a65-a8b3-df0b489e0d3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawing">
+      <UniqueIdentifier>{fb8ef7b4-7616-4808-84bb-791ec1a6b31d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{3c4e632e-7310-4135-abe7-720308775b92}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

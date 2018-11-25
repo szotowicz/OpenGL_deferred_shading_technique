@@ -1,0 +1,14 @@
+#version 140
+precision highp float;
+
+in vec4 inPosition;
+in vec2 inTexcoord2;
+
+out vec2 Texcoord2;
+
+void main()
+{
+	gl_Position = inPosition;
+
+	Texcoord2 = inTexcoord2;
+}

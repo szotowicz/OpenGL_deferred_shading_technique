@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Code\Main.cpp" />
+    <ClCompile Include="Code\ApplicationCreation.cpp">
+      <Filter>Creation</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\OpenGLCreation.cpp">
+      <Filter>Creation</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\OpenGLFunctionsCreation.cpp">
+      <Filter>Creation</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\GeometryCreation.cpp">
+      <Filter>Creation</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\ShaderCreation.cpp">
+      <Filter>Creation</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\MatrixAlgebra.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\OpenGLFunctions.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\ErrorMessage.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\TextureLoader.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Drawing.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\GlobalVariables.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\ScenePreparation.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Code\ApplicationCreation.h">
+      <Filter>Creation</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\OpenGLCreation.h">
+      <Filter>Creation</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\OpenGLFunctionsCreation.h">
+      <Filter>Creation</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\GeometryCreation.h">
+      <Filter>Creation</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\ShaderCreation.h">
+      <Filter>Creation</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\MatrixAlgebra.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\OpenGLFunctions.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\ErrorMessage.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\TextureLoader.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Drawing.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\GlobalVariables.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\ScenePreparation.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{99b4c699-d873-4813-beaa-a5b9c5f0063b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Creation">
+      <UniqueIdentifier>{48885506-5eee-4bdc-9995-00f2eb7ca2fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{da3fe731-245b-4b4e-9675-e35384c6e881}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{99122a97-6480-430e-8298-fa2c718db2d8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Output\Shaders\BasePass.fp">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Output\Shaders\BasePass.vp">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Output\Shaders\LightingPass.fp">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Output\Shaders\LightingPass.vp">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
