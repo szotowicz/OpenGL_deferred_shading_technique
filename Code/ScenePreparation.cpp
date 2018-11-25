@@ -35,10 +35,10 @@ bool PrepareScene() {
 
     // 21. Store location of a normal texture from LightingPass.fp shader in a NormalTextureHandle variable (see glGetUniformLocation function documentation)
     // ...
-
+	NormalTextureHandle = glGetUniformLocation(LightingPassProgram, "uNormal");
     // 31. Store location of a position texture from LightingPass.fp shader in a PositionTextureHandle variable (see glGetUniformLocation function documentation)
     // ...
-
+	PositionTextureHandle = glGetUniformLocation(LightingPassProgram, "uPosition");
     // Get perspective projection matrix
     GetPerspectiveProjectionMatrix( 45.0f, 1.0f, 20.0f, ProjectionMatrix );
 
@@ -61,10 +61,12 @@ bool PrepareScene() {
     // 22. Activate texture channel 2 and bind NormalTexture texture with it (see glActiveTexture and glBindTexture functions documentation)
     // Check the type of NormalTexture
     // ...
-
+	glActiveTexture(GL_TEXTURE2);
+	glBindTexture(GL_TEXTURE_RECTANGLE, NormalTexture);
     // 32. Activate texture channel 3 and bind PositionTexture texture with it (see glActiveTexture and glBindTexture functions documentation)
     // ...
-
+	glActiveTexture(GL_TEXTURE3);
+	glBindTexture(GL_TEXTURE_RECTANGLE, PositionTexture);
     // Set values for shader uniform parameters
     glUseProgram( BasePassProgram );
     glUniform1i( DiffuseTextureHandle, 0 );
@@ -74,10 +76,10 @@ bool PrepareScene() {
 
     // 23. Store in a uniform variable represented by NormalTextureHandle activated texture channel number (see glUniform1i function documentation)
     // ...
-
+	glUniform1i(NormalTextureHandle, 2);
     // 33. Store in a uniform variable represented by PositionTextureHandle activated texture channel number (see glUniform1i function documentation)
     // ...
-
+	glUniform1i(PositionTextureHandle, 3);
     // Deactivate any texture units
     glActiveTexture( GL_TEXTURE8 );
     glBindTexture( GL_TEXTURE_2D, 0 );

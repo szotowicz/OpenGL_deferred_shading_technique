@@ -14,7 +14,7 @@
 // 30a. Add another attachment with number 2 to target buffers
 // ...
 
-GLenum buffers[] = { GL_COLOR_ATTACHMENT0 };
+GLenum buffers[] = { GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2 };
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Draw                                                                                                      //
@@ -27,10 +27,10 @@ void Draw() {
 
     // 16a. Activate render target (framebuffer object) for base pass (see glBindFramebuffer function)
     // ...
-
+	glBindFramebuffer(GL_DRAW_FRAMEBUFFER, BasePassRT);
     // 16b. Set target buffers into which drawing should be performed (see buffer variable and glDrawBuffers function)
     // ...
-
+	glDrawBuffers(3, buffers);
     // 20b. Modify the number of target buffers used for drawing (see step 16b)
     // ...
 
@@ -89,25 +89,25 @@ void Draw() {
     // 16c. Deactivate render target (disable FBO) before postprocess lighting phase
     // From now rendering will be performed normally, to window
     // ...
-
+	glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
     // 16d. Set the back buffer as a target for drawing commands
     // ...
-
+	glDrawBuffer(GL_BACK);
     // 16e. Clear color and depth of a back buffer (see glClear function)
     // ...
-
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     // 16f. Disable depth testing - it is not necessary in postprocess phase
     // ...
-
+	glDisable(GL_DEPTH_TEST);
     // 14b. Activate shader program for lighting pass (see glUseProgram function)
     // ... 
-
+	glUseProgram(LightingPassProgram);
     // 14c. Activate VAO for drawing fullscreen quad (see glBindVertexArray function)
     // ...
-
+	glBindVertexArray(GQuadVAO);
     // 14d. Draw quad using VAO and TRIANGLES primitive (see glDrawArrays function)
     // ...
-
+	glDrawArrays(GL_TRIANGLES, 0, 6);
     // Disable VAO - it is always good to disable all OpenGL objects when they are not required
     glBindVertexArray( 0 );
 

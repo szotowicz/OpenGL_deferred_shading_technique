@@ -19,7 +19,7 @@ int WINAPI WinMain(	HINSTANCE   i_Instance,
     // 3. Add name and surname to application title
     // ...
     // Create window and OpenGL rendering context
-    if( !CreateApplication( i_Instance, "Deferred Shading", WndProc, GWindowHandle, GDeviceContext, GRenderingContext ) ) {
+    if( !CreateApplication( i_Instance, "Mikolaj Szotowicz", WndProc, GWindowHandle, GDeviceContext, GRenderingContext ) ) {
         return 1;
     }
     // Setup OpenGL state and prepare objects for drawing

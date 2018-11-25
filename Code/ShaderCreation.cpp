@@ -38,19 +38,21 @@ bool CreateShaders() {
     // Bind streams of vertex data with proper shader attributes
     // 12b. Bind named input vertex attributes (from BasePass.vp file) with proper stream numbers (see glBindAttribLocation function documentation)
     // ...
-
+	glBindAttribLocation(BasePassProgram, 0, "inPosition");
+	glBindAttribLocation(BasePassProgram, 1, "inTexCoord");
+	glBindAttribLocation(BasePassProgram, 2, "inNormal");
     // 19a. Bind color output from fragment shader with 0. channel (see glBindFragDataLocation function documentation)
     // ...
-
+	glBindFragDataLocation(BasePassProgram, 0, "oColor");
     // 19b. Bind normal output from fragment shader with 1. channel
     // ...
-
+	glBindFragDataLocation(BasePassProgram, 1, "oNormal");
     // 29. Bind position output from fragment shader (from BasePass.fp file) with 2. channel
     // ...
-
+	glBindFragDataLocation(BasePassProgram, 2, "oPosition");
     // 12c. Perform once again BasePassProgram linking to confirm introduced changes
     // ...
-
+	glLinkProgram(BasePassProgram);
     // Lighting pass shaders
 
     // Create vertex and fragment shaders for lighting pass
